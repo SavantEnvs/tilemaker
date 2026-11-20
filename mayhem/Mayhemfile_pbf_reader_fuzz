@@ -1,0 +1,9 @@
+project: savantenvs/tilemaker
+target: pbf_reader_fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pbf_reader_fuzz/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/bin/pbf_reader_fuzz
+    libfuzzer: true
+    timeout: 5
